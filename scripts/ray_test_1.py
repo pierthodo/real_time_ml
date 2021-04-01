@@ -22,6 +22,7 @@ class StreamServer(object):
 
 @ray.remote
 def environment(stream):
+    print("A")
     env = gym.make("MountainCarContinuous-v0")
     s = env.reset()
     for i in range(1000):
